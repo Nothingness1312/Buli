@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laporan Bullying</title>
+    <style>
+        h1 {
+            background-color: rgba(255, 255, 255, 0.7); /* Latar belakang putih dengan sedikit transparansi */
+            padding: 20px; /* Menambahkan jarak di dalam kotak */
+            border-radius: 10px; /* Membuat sudut-sudut kotak menjadi melengkung */
+            text-align: center; /* Mengatur teks menjadi rata tengah */
+            max-width: 80%; /* Mengatur lebar maksimum kotak */
+            margin: 20px auto; /* Menambahkan jarak dari tepi atas/bawah dan memusatkan kotak */
+        }
+        .form-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laporan Bullying SMKN 1 TUBAN</h1>
+        <p>Laporkan Kejadian Bullying Yang Anda Alami Atau Saksikan!!!</p>
+    </header>
+
+    <section class="form-section">
+        <form action="#" method="post" onsubmit="kirimLaporan(); return false;">
+            <label for="pelapor">Pelapor :</label>
+            <input type="text" id="pelapor" class="form-input">
+
+            <label for="korban">Nama Korban :</label>
+            <input type="text" id="korban" class="form-input">
+
+            <label for="pelaku">Nama Pelaku :</label>
+            <input type="text" id="pelaku" class="form-input">
+
+            <label for="saksi">Saksi Mata :</label>
+            <input type="text" id="saksi" class="form-input">
+
+            <label for="tanggal">Tanggal :</label>
+            <input type="date" id="tanggal" class="form-input">
+
+            <label for="lokasi">Lokasi :</label>
+            <input type="text" id="lokasi" class="form-input"> 
+
+            <button type="submit">Kirim Laporan Kepada Pihak Berwajib</button>
+        </form>
+    </section>
+
+    <script>
+        function kirimLaporan() {
+            var pelapor = document.getElementById("pelapor").value;
+            var korban = document.getElementById("korban").value;
+            var pelaku = document.getElementById("pelaku").value;
+            var saksi = document.getElementById("saksi").value;
+            var tanggal = document.getElementById("tanggal").value;
+            var lokasi = document.getElementById("lokasi").value;
+
+            var pesan = "Pelapor: " + pelapor + "%0ANama Korban: " + korban + "%0ANama Pelaku: " + pelaku + 
+                        "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi;
+
+            var nomorWhatsApp = "6283848319444"; // Ganti dengan nomor WhatsApp tujuan
+            var url = "https://wa.me/" + nomorWhatsApp + "?text=" + pesan;
+
+            window.open(url, '_blank');
+        } 
+    </script>
+</body>
+</html>

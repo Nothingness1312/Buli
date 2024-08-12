@@ -49,7 +49,12 @@
             <input type="text" id="lokasi" class="form-input"> 
 
             <label for="jenis">Jenis Bullying :</label>
-            <input type="text" id="jenis" class="form-input">
+            <select id="jenis" class="form-input">
+                <option value="Fisik">Fisik</option>
+                <option value="Verbal">Verbal</option>
+                <option value="Sosial">Sosial</option>
+                <option value="Cyberbullying">Cyberbullying</option>
+            </select>
 
             <button type="submit">Kirim Laporan Kepada Pihak Berwajib</button>
         </form>
@@ -63,14 +68,16 @@
             var saksi = document.getElementById("saksi").value;
             var tanggal = document.getElementById("tanggal").value;
             var lokasi = document.getElementById("lokasi").value;
+            var jenis = document.getElementById("jenis").value; // Ambil nilai dari dropdown "jenis"
 
             var pesan = "Pelapor: " + pelapor + "%0ANama Korban: " + korban + "%0ANama Pelaku: " + pelaku + 
-                        "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi;
+                        "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi + 
+                        "%0AJenis Bullying: " + jenis; // Tambahkan jenis bullying ke dalam pesan
 
             var nomorWhatsApp = "6283848319444"; // Ganti dengan nomor WhatsApp tujuan
             var url = "https://wa.me/" + nomorWhatsApp + "?text=" + pesan;
 
-            window.open(url, '_blank');
+            window.open(url, '_blank'); // Membuka WhatsApp dengan pesan yang sudah diisi
         } 
     </script>
 </body>

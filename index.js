@@ -5,7 +5,7 @@ function kirimLaporan() {
     var tanggal = document.getElementById("tanggal").value;
     var lokasi = document.getElementById("lokasi").value;
     var pelaku = document.getElementById("pelaku").value;
-    var jenis = document.getElementById("jenis").value;
+    var jenis = document.getElementById("Jenis Bullying").value;
 
     var pesan = "Pelapor: " + pelapor + "%0ANama Korban: " + korban + "%0ANama Pelaku: " + pelaku + 
                 "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi;

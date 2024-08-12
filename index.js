@@ -8,7 +8,8 @@ function kirimLaporan() {
     var jenis = document.getElementById("jenis").value; // Ambil nilai dari input "jenis"
 
     var pesan = "Pelapor: " + pelapor + "%0ANama Korban: " + korban + "%0ANama Pelaku: " + pelaku + 
-                "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi;
+                "%0ASaksi Mata: " + saksi + "%0ATanggal: " + tanggal + "%0ALokasi: " + lokasi + 
+                "%0AJenis Bullying: " + jenis; // Tambahkan jenis ke dalam pesan
 
     var nomorWhatsApp = "6283848319444"; // Ganti dengan nomor WhatsApp tujuan
     var url = "https://wa.me/" + nomorWhatsApp + "?text=" + pesan;
